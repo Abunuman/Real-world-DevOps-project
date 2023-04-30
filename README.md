@@ -4,8 +4,8 @@
 
  Hands-On DevOps projects aim to provide practical, real-world examples of how to implement DevOps practices using a variety of tools and technologies. These projects are designed to give developers, operations teams, and IT professionals hands-on experience with DevOps techniques, tools, and processes.
 
- This repository contains a list of Hands-On DevOps projects by NerdRx (Toyyib Muhammad-Jamiu also known as Abunuman) hosted on GitHub. Each project has a brief description and a link to its GitHub repository.
-
+ This repository contains a list of Hands-On DevOps projects by NerdRx (Toyyib Muhammad-Jamiu also known as Abunuman) hosted on GitHub. Each project has a brief description and a steps followed for their implementation.
+ 
 There are 26 projects in all and an additional project on Bash Scripting for Automation while a vast majority of these projects are deployed through AWS as a CSP (Cloud Service Provider).
 
  This promises to be fun.
