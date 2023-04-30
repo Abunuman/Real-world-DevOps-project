@@ -303,9 +303,10 @@ php -v
 
 it displayed sth of this nature 
 ```
-PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+PHP 8.1.2-1ubuntu2.11 (cli) (built: Feb 22 2023 22:56:18) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v3.4.0, Copyright (c) Zend Technologies
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+with Zend OPcache v8.1.2-1ubuntu2.11, Copyright (c), by Zend Technologies
 ```
 
 At this point, the LAMP stack is completely installed and fully operational.
@@ -352,7 +353,7 @@ d.
 ```
 <VirtualHost *:80>
     ServerName nerdrxlamp
-    ServerAlias www.nerdrxlamp 
+    ServerAlias nerdrxlamp.maxxim 
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/nerdrxlamp
     ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -379,7 +380,7 @@ I then used a2ensite command to enable the new virtual host:
 
 f.
 ```
-sudo a2ensite projectlamp
+sudo a2ensite nerdrxlamp
 ```
 
 One might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom 
@@ -391,12 +392,27 @@ g.
 sudo a2dissite 000-default
 ```
 
-To make sure the configuration file doesn’t contain syntax errors, I ran:
+Next, I defined the Servername in /etc/apache2/apache2.conf under "Global Configuration" thus:
 
 h.
 ```
+sudo nano /etc/apache2/apache2.conf
+```
+This prevents this error message after running a configtest
+
+```
+"Could not reliably determine the server's fully qualified domain name, using 10.0.1.117. Set the 'ServerName' directive globally to suppress this message"
+```
+but instead gives a "Syntax Ok" message
+
+To make sure the configuration file doesn’t contain syntax errors, I ran a configtest:
+
+i.
+```
 sudo apache2ctl configtest
 ```
+
+This gives 'Syntax Ok' message
 
 Finally, I reloaded Apache so these changes take effect:
 
@@ -405,8 +421,7 @@ Finally, I reloaded Apache so these changes take effect:
 sudo systemctl reload apache2
 ```
 
-The new website is now active, but the web root /var/www/nerdrxlamp is still empty. I created an index.html file in that location 
-so as to test that the virtual host works as expected:
+The new website is now active, but the web root /var/www/nerdrxlamp is still empty. I created an index.html file in that location so as to test that the virtual host works as expected:
 
 
 ```
@@ -421,10 +436,10 @@ I thereafter tried to open thewebsite URL using IP address:
 http://<Public-IP-Address>:80
 ```
 
-<!-- If you see the text from ‘echo’ command you wrote to index.html file, then it means your Apache virtual host is working as expected.
+If you see the text from ‘echo’ command you wrote to index.html file, then it means your Apache virtual host is working as expected.
 In the output you will see your server’s public hostname (DNS name) and public IP address. You can also access your website in your
 browser by public DNS name, not only by IP – try it out, the result must be the same (port is optional)
- -->
+
 
 OR
 
@@ -432,9 +447,7 @@ OR
 http://<Public-DNS-Name>:80
 ```
 
-<!-- You can leave this file in place as a temporary landing page for your application until you set up an index.php file to replace it.
-Once you do that, remember to remove or rename the index.html file from your document root, as it would take precedence over an 
-index.php file by default. -->
+
 
 
 # STEP 5 — ENABLING PHP ON THE WEBSITE
@@ -502,7 +515,7 @@ contains sensitive information about the PHP environment -and the Ubuntu server.
 
 
 ```
-sudo rm /var/www/projectlamp/index.php
+sudo rm /var/www/nerdrxlamp/index.php
 ```
 
 Congrats NerdRx, 
