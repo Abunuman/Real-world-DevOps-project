@@ -292,7 +292,7 @@ Core PHP packages will automatically be installed as dependencies.
 To install these 3 packages at once, run:
 
 ```
-sudo apt install php libapache2-mod-php php-mysql
+sudo apt install php8.1 libapache2-mod-php php-mysql
 ```
 
 Next, is confirmation of PHP version:
