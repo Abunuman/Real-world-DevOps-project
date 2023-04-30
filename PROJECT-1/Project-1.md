@@ -1,12 +1,15 @@
 # LAMP STACK IMPLEMENTATION
-In DevOps, there are different stack of technologies that make different solutions possible. These stack of
-technologies are regarded as WEB STACKS. Examples of Web Stacks include LAMP, LEMP, MEAN, and MERN stacks.
-Lets have a quick overview on what a 
-Technology stack is.
-What is a Technology stack (Web Stack)?
+In DevOps, there are different stack of technologies that make different solutions possible. These stack of technologies are regarded as WEB STACKS. Examples of Web Stacks include LAMP, LEMP, MEAN, and MERN stacks.
+
+ ## What is a Technology stack (Web Stack)?
+
+ ---
 A technology stack is a set of frameworks and tools used to develop a software product. This set of frameworks and tools are very 
-specifically chosen to work together in creating a well-functioning software. They are acronymns for individual technologies used
-together for a specific technology product. some examples are…
+specifically chosen to work together in creating a well-functioning software. 
+
+They are acronymns for individual technologies used together for a specific technology product. 
+
+Some examples are…
 
 - LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
 - LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
@@ -506,6 +509,7 @@ sudo rm /var/www/projectlamp/index.php
 Congrats NerdRx, 
 
 That's Project 1 Done and Dusted !!!!
+
 
 
 
