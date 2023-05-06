@@ -486,11 +486,7 @@ Output
 Next, we’ll create a test table named todo_list. From the MySQL console, we run the following statement:
 
 ```
-CREATE TABLE nerdrx_database.todo_list (
-mysql>     item_id INT AUTO_INCREMENT,
-mysql>     content VARCHAR(255),
-mysql>     PRIMARY KEY(item_id)
-mysql> );
+CREATE TABLE nerdrx_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
 ```
 
 And insert a few rows of content in the test table. We might want to repeat the next command a few times, using different VALUES:
