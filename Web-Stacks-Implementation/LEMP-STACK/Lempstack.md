@@ -1,6 +1,6 @@
 # LEMP STACK IMPLEMENTATION
 
-In this section, there will be an implementation a LEMP stack involving the use of:
+In this section, there will be an implementation of the LEMP stack involving the use of:
 - [ ] Linux OS (Ubuntu flavor)
  
 - [ ] Nginx webserver
